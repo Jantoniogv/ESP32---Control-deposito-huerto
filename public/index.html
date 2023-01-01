@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Control riego ESP32 - Control de bomba de riego y gestion de electrovalvulas"
+    />
+    <meta name="author" content="Jose Antonio G. V." />
+    <link rel="icon" href="favicon.ico" />
+    <title>Control riego ESP32 - Configuración</title>
+    <link href="ESPControl.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <form class="form" action="/change_conf" method="post">
+      <h1>Configuracion ESP32</h1>
+      <div class="logo">
+        <img src="logo.jpg" alt="Logo" />
+      </div>
+      <div class="formcontainer">
+        <label class="label" for="ssidAP">SSID punto de acceso</label>
+        <input type="text" value="%ssidAP%" name="ssidAP" />
+        <label class="label" for="passSTA">Contraseña punto de acceso</label>
+        <input type="password" value="%passAP%" name="passAP" />
+        <label class="label" for="IPap">IP punto de acceso</label>
+        <input type="text" value="%IPap%" name="IPap" />
+        <div class="checkbox">
+          <input
+            id="check_wifi"
+            type="checkbox"
+            name="activate_wifi"
+            checked
+            value="1"
+          />
+          <span class="label">Activar wifi local</span>
+        </div>
+        <label class="label" for="ssidSTA">SSID wifi local</label>
+        <input id="ssidSTA" type="text" value="%ssidSTA%" name="ssidSTA" />
+        <label class="label" for="passSTA">Contraseña wifi local</label>
+        <input id="passSTA" type="password" value="%passSTA%" name="passSTA" />
+        <label class="label" for="IPsta">IP wifi local</label>
+        <input id="IPsta" type="text" value="%IPsta%" name="IPsta" />
+      </div>
+      <button class="button-save" type="submit">Guardar y reiniciar</button>
+    </form>
+    <script src="ESPControl.js"></script>
+  </body>
+</html>

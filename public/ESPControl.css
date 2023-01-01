@@ -1,0 +1,55 @@
+    html, body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    }
+    .form {
+      display: grid;
+    border: 5px solid #f1f1f1;
+    }
+
+    .formcontainer {
+      margin: 24px 50px 12px;
+      padding: 16px 0;
+      text-align:left;
+   }
+
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+    .label {
+    color: black;
+    font-weight: 550;
+    }
+    .checkbox{
+      margin: 50px 0px 15px 0px;
+    }
+    .button-save {
+    background-color: #4286f4;
+    color: white;
+    padding: 14px 0;
+    margin: auto;
+    margin-bottom: 15px;
+    border: none;
+    width: 10%;
+    }
+
+    .button-save:hover {
+      opacity: 0.8;
+      }
+    h1 {
+    text-align:center;
+    font-size:18;
+    }
+
+  
