@@ -21,12 +21,12 @@
 #define OFF "OFF"
 
 // Estado de cada electrovalvula
-/* struct elecVal
+struct elecVal
 {
     bool evDepHuertoSec1 = false;
     bool evDepHuertoSec2 = false;
 
-} elecVal; */
+} elecVal;
 
 // Topic recibidos
 const char evDepHuertoSec1[] = "regar/huerto/sec1";

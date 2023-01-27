@@ -19,19 +19,25 @@ void data_lora_receive_control(String data)
         DEBUG_PRINT((String)evDepHuertoSec1 + "=" + payload);
 
         // Control sector 1
-        if (payload == ON)
+        if (payload == ON && elecVal.evDepHuertoSec1 == false)
         {
             DEBUG_PRINT("Sector_1=ON");
+
             digitalWrite(EV_SEC_1_ON, LOW);
             vTaskDelay(500);
             digitalWrite(EV_SEC_1_ON, HIGH);
+
+            elecVal.evDepHuertoSec1 = true;
         }
         else if (payload == OFF)
         {
             DEBUG_PRINT("Sector_1=OFF");
+
             digitalWrite(EV_SEC_1_OFF, LOW);
             vTaskDelay(500);
             digitalWrite(EV_SEC_1_OFF, HIGH);
+
+            elecVal.evDepHuertoSec1 = false;
         }
 
         // Envia los datos mediante lora
@@ -46,19 +52,25 @@ void data_lora_receive_control(String data)
 
         DEBUG_PRINT((String)evDepHuertoSec2 + "=" + payload);
 
-        if (payload == ON)
+        if (payload == ON && elecVal.evDepHuertoSec1 == false)
         {
             DEBUG_PRINT("Sector_2=ON");
+
             digitalWrite(EV_SEC_2_ON, LOW);
             vTaskDelay(500);
             digitalWrite(EV_SEC_2_ON, HIGH);
+
+            elecVal.evDepHuertoSec1 = true;
         }
         else if (payload == OFF)
         {
             DEBUG_PRINT("Sector_2=OFF");
+
             digitalWrite(EV_SEC_2_OFF, LOW);
             vTaskDelay(500);
             digitalWrite(EV_SEC_2_OFF, HIGH);
+
+            elecVal.evDepHuertoSec1 = false;
         }
 
         // Envia los datos mediante lora
